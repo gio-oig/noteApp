@@ -8,7 +8,7 @@ class Connection
     {
         try {
             // $this->pdo = new PDO('mysql:server=localhost;dbname=notes', 'root', '');
-            $this->pdo = new PDO('mysql:server=remotemysql.com;dbname=voVh3Ac1IY', 'voVh3Ac1IY', 'ZzKh0BoyNW');
+            $this->pdo = new PDO('mysql:server=remotemysql.com;dbname=voVh3Ac1IY', 'voVh3Ac1IY', 'y9jnsz7bP5');
             $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $exception) {
             echo "ERROR: " . $exception->getMessage();
@@ -18,7 +18,7 @@ class Connection
 
     public function getNotes()
     {
-        $statement = $this->pdo->prepare("SELECT * FROM notes ORDER BY create_date DESC");
+        $statement = $this->pdo->prepare("SELECT * FROM voVh3Ac1IY ORDER BY create_date DESC");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -27,7 +27,7 @@ class Connection
     {
         $statement = $this->pdo->prepare(
 
-            "INSERT INTO notes (title, description, create_date)
+            "INSERT INTO voVh3Ac1IY (title, description, create_date)
         VALUES (:title, :description, :date)");
 
         $statement->bindValue('title', $note['title']);
@@ -38,7 +38,7 @@ class Connection
 
     public function getNoteById($id)
     {
-        $statement = $this->pdo->prepare("SELECT * FROM notes WHERE id = :id");
+        $statement = $this->pdo->prepare("SELECT * FROM voVh3Ac1IY WHERE id = :id");
         $statement->bindValue('id',$id);
         $statement->execute();
         return $statement->fetch(PDO::FETCH_ASSOC);
