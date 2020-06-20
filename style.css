@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 400px;
+  padding: 10px;
+}
+
+form > * {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input[type='text'],
+input[type='textarea'] {
+  /* width: 300px; */
+  padding: 5px 5px;
+}
+
+button {
+  padding: 3px 0;
+}

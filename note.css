@@ -1,0 +1,53 @@
+.app {
+    margin: 20px;
+}
+
+.note {
+    position: relative;
+    background: #e5d84a;
+    padding: 10px;
+    margin: 10px 0;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    animation: animate 0.5s ease-in-out;
+}
+
+.note .title {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.note .close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    cursor:pointer;
+    opacity: 0;
+}
+
+.note .description {
+    margin: 10px 0;
+}
+
+.note small {
+    align-self: flex-end;
+}
+
+
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
