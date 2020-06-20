@@ -17,9 +17,9 @@ if (isset($_GET['id'])) {
     $currentNote = $connection->getNoteById($_GET['id']);
 }
 
-echo "<pre>";
-var_dump($currentNote);
-echo "</pre>";
+// echo "<pre>";
+// var_dump($currentNote);
+// echo "</pre>";
 ?>
 
 <!DOCTYPE html>
